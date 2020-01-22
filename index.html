@@ -1,18 +1,146 @@
 <html>
   <head>
     <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
       
+      nav {
+        display: flex;
+        background-color: dodgerblue;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5rem;
+      }
+
+      nav a:first-child {
+        font-size: 2.5rem;
+      }
+
+      a.selected {
+        font-weight: bold;
+      }
+
+      h2 {
+        color: #666;
+      }
+      
+      .tiles {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tile {
+        margin: 0 1%;
+      }
+      @media (min-width: 600px) {
+        #submit-form {
+          margin: 0 auto;
+          width: 600px;
+        }
+        .tile {
+          width: 31%;
+        }
+      }
+      form .row label {
+        display: flex;
+        justify-content: space-between;
+      }
+      form .row label input {
+        flex-grow: 2;
+      }
+      form .row label span {
+        flex-grow: 1;
+      }
+
     </style>
   </head>
   
   <body>
     <main>
-      <div>
-        <h1>Acme Layout</h1>
-        <h2><a href="#">Users</a></h2>
-        <h2><a href="#">Departments</a></h2>
-        <h2><a href="#">Contact</a></h2>
-      </div>
+
+      <nav>
+        <a href="#">Acme Layout</a>
+        <a href="#">Users</a>
+        <a href="#">Departments</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <section>
+          <h2>Users</h2>
+          
+          <form action="" id="submit-form">
+            <fieldset>
+              <h2>Create A User</h2>
+              <div class="row">
+                <label for="firstName">
+                  <span>First Name</span>
+                  <input name="firstName" type="text" placeholder="Jane" />
+                </label>
+              </div>
+              <div class="row">
+                <label for="lasttName">
+                  <span>Last Name</span>
+                  <input name="lasttName" type="text" placeholder="Doe" />
+                </label>
+              </div>
+              <div class="row">
+                <label for="firstName">
+                  <span>Department</span>
+                  <select>
+                    <option value="--None--">--None--</option>
+                    <option value="Super Department">Bad Department</option>
+                    <option value="Bad Department">Bad Department</option>
+                  </select>
+                </label>
+              </div>
+              <div class="row">
+                <input type="submit" />
+                <input type="reset" /> 
+              </div>
+            </fieldset>
+          </form>
+  
+          <div class="tiles">
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for the user. Some text for the user. Some text for the user. Some text for the user. Some text for the user. Some text for the user.</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+            <div class="tile">
+              <p><strong>User A</strong></p>
+              <p>Some text for user</p>
+            </div>
+          </div>
+          
+        </section>
+
+
     </main>
   </body>
 </html>
