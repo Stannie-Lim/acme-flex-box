@@ -4,6 +4,7 @@
       body {
         font-family: sans-serif;
         margin: 0;
+        color: #666;
       }
       
       nav {
@@ -28,35 +29,72 @@
         font-weight: bold;
       }
 
-      h2 {
-        color: #666;
+      section {
+        padding: 1rem;
       }
-      
+
       .tiles {
-        display: flex;
-        flex-wrap: wrap;
+        text-align: center;
       }
+
       .tile {
-        margin: 0 1%;
+        border: 1px solid #000;
+        margin: 0 0 1rem;
+        border-radius: 15px;
+        padding: 1rem;
+      }
+      #submit-form {
+        margin-bottom: 1rem;
+      }
+      #submit-form fieldset {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+      #submit-form fieldset h2 {
+        margin-top: 0;
       }
       @media (min-width: 600px) {
         #submit-form {
-          margin: 0 auto;
+          margin: 0 auto 1rem;
           width: 600px;
         }
-        .tile {
-          width: 31%;
+        .tiles {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; 
         }
+        .tile {
+          width: calc((100% / 3) - 3rem  - 2px); 
+          
+        }
+      }
+      h2 {
+        font-size: 2.5rem;
       }
       form .row label {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
       }
       form .row label input {
-        flex-grow: 2;
+        flex-grow: 3;
       }
       form .row label span {
         flex-grow: 1;
+      }
+      select {
+        width: 72%;
+        border: solid 1px grey;
+        border-radius: 5px;
+      }
+      button {
+        height: 30px;
+        align-items: center;
+      }
+      .save {
+        background-color: dodgerblue;
+        color: white;
+        border: 1px solid black;
       }
 
     </style>
@@ -101,8 +139,8 @@
                 </label>
               </div>
               <div class="row">
-                <input type="submit" />
-                <input type="reset" /> 
+                <button>Clear</button>
+                <button class="save">Save</button>
               </div>
             </fieldset>
           </form>
